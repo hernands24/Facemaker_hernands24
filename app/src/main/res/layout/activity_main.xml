@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity">
+
+	<com.example.facemaker.FaceView
+		android:id="@+id/FaceView"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toTopOf="@+id/randomizeButton"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="1.0" />
+
+	<TextView
+		android:id="@+id/TextViewRed"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:text="@string/red"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="@+id/GuidelineColumn"
+		app:layout_constraintTop_toBottomOf="@+id/FaceView" />
+
+	<SeekBar
+		android:id="@+id/redSeekBar"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:max="255"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="@+id/GuidelineColumn"
+		app:layout_constraintTop_toBottomOf="@+id/TextViewRed" />
+
+	<TextView
+		android:id="@+id/TextViewGreen"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:text="@string/green"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="@+id/GuidelineColumn"
+		app:layout_constraintTop_toBottomOf="@+id/redSeekBar" />
+
+	<SeekBar
+		android:id="@+id/greenSeekBar"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:max="255"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="@+id/GuidelineColumn"
+		app:layout_constraintTop_toBottomOf="@+id/TextViewGreen" />
+
+	<TextView
+		android:id="@+id/TextViewBlue"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:text="@string/blue"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="@+id/GuidelineColumn"
+		app:layout_constraintTop_toBottomOf="@+id/greenSeekBar" />
+
+	<SeekBar
+		android:id="@+id/blueSeekBar"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:max="255"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="@+id/GuidelineColumn"
+		app:layout_constraintTop_toBottomOf="@+id/TextViewBlue" />
+
+	<Spinner
+		android:id="@+id/SpinnerStyles"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="@+id/GuidelineColumn"
+		app:layout_constraintTop_toBottomOf="@+id/blueSeekBar" />
+
+	<Button
+		android:id="@+id/randomizeButton"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:text="@string/randomize"
+		app:layout_constraintBottom_toTopOf="@+id/RadioGroupHES"
+		app:layout_constraintEnd_toStartOf="@+id/GuidelineColumn"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<RadioGroup
+		android:id="@+id/RadioGroupHES"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/GuidelineColumn"
+		app:layout_constraintStart_toStartOf="parent">
+
+		<RadioButton
+			android:id="@+id/hairRadioButton"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/hair"
+			android:checked="true" />
+
+		<RadioButton
+			android:id="@+id/eyeRadioButton"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/eyes" />
+
+		<RadioButton
+			android:id="@+id/skinRadioButton"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/skin" />
+	</RadioGroup>
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/GuidelineColumn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		app:layout_constraintGuide_percent="0.33" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

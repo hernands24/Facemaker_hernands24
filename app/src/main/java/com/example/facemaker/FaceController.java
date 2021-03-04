@@ -28,7 +28,7 @@ public class FaceController implements	View.OnClickListener,
 
 	private Spinner spinner;
 
-
+//Initial COmmit
 
 	public FaceController(FaceView view, SeekBar red, SeekBar green, SeekBar blue, RadioGroup radioGroup, Spinner spinner)
 	{
